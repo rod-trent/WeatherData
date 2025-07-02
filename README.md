@@ -1,6 +1,6 @@
 # Instructions for Using the WeatherData Dataset
 
-This guide provides step-by-step instructions for setting up and using the `WeatherData` dataset in Azure Data Explorer to follow along with the "KQL Art Gallery: Visualizing Data with Creative Queries" blog post. The dataset contains synthetic weather observations for cities (Seattle, Miami, Denver) and is designed for creating visualizations with Kusto Query Language (KQL).
+This guide provides step-by-step instructions for setting up and using the `WeatherData` dataset in Azure Data Explorer to follow along with the ["KQL Art Gallery: Visualizing Data with Creative Queries" blog post](https://rodtrent.substack.com/p/kql-art-gallery-visualizing-data). The dataset contains synthetic weather observations for cities (Seattle, Miami, Denver) and is designed for creating visualizations with Kusto Query Language (KQL).
 
 ## Prerequisites
 - Access to an **Azure Data Explorer** cluster. If you don’t have one, you can use the [free cluster](https://dataexplorer.azure.com/freecluster) or the `help` cluster for testing.
@@ -45,7 +45,7 @@ This guide provides step-by-step instructions for setting up and using the `Weat
      ```
      followed by the data rows (e.g., `2025-06-02T00:00:00,Seattle,55.2,80`).
    - Paste the entire ingestion command into the query editor and execute it.
-   - Note: The provided sample includes one day of data for brevity. To fully replicate the blog post’s 30-day dataset, extend the data by adding rows for additional days (up to `2025-07-01`) with realistic temperature and humidity variations, as suggested in the file’s comments.
+   - Note: The provided sample includes one day of data for brevity. To fully replicate the [blog post’s](https://rodtrent.substack.com/p/kql-art-gallery-visualizing-data) 30-day dataset, extend the data by adding rows for additional days (up to `2025-07-01`) with realistic temperature and humidity variations, as suggested in the file’s comments.
 
 4. **Verify the Data**:
    - Run a simple query to confirm the data was ingested correctly:
@@ -56,7 +56,7 @@ This guide provides step-by-step instructions for setting up and using the `Weat
    - This should display the first 10 rows, showing columns for `Timestamp`, `City`, `Temperature`, and `Humidity`.
 
 ## Step 3: Use the Dataset with KQL Queries
-The `WeatherData` dataset is now ready for the visualizations described in the blog post. Follow these steps to use it with the provided KQL queries:
+The `WeatherData` dataset is now ready for the visualizations described in the [blog post](https://rodtrent.substack.com/p/kql-art-gallery-visualizing-data). Follow these steps to use it with the provided KQL queries:
 
 1. **Bar Chart of Average Temperatures**:
    - Use the query:
@@ -101,7 +101,7 @@ The `WeatherData` dataset is now ready for the visualizations described in the b
 - **Permissions Errors**: If using a shared cluster, verify you have write permissions for the database or use a personal cluster.
 
 ## Notes
-- The sample data starts on `2025-06-02` and should be extended to `2025-07-01` for full compatibility with the blog post’s queries.
+- The sample data starts on `2025-06-02` and should be extended to `2025-07-01` for full compatibility with the [blog post’s](https://rodtrent.substack.com/p/kql-art-gallery-visualizing-data) queries.
 - If you lack access to Azure Data Explorer, you can test similar queries on the `help` cluster’s `StormEvents` table, adapting the schema accordingly.
 - For large datasets, consider batching the ingestion command to avoid timeouts.
 
